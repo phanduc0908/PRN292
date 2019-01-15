@@ -1,0 +1,7 @@
+D:\FU Learnning\SP 2019\PRN 292\Demo\Auto\bin\Debug\Auto.exe.config
+D:\FU Learnning\SP 2019\PRN 292\Demo\Auto\bin\Debug\Auto.exe
+D:\FU Learnning\SP 2019\PRN 292\Demo\Auto\bin\Debug\Auto.pdb
+D:\FU Learnning\SP 2019\PRN 292\Demo\Auto\obj\Debug\Auto.csproj.CoreCompileInputs.cache
+D:\FU Learnning\SP 2019\PRN 292\Demo\Auto\obj\Debug\Auto.exe
+D:\FU Learnning\SP 2019\PRN 292\Demo\Auto\obj\Debug\Auto.pdb
+D:\FU Learnning\SP 2019\PRN 292\Demo\Auto\obj\Debug\Auto.csprojAssemblyReference.cache
