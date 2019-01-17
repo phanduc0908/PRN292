@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Auto
 {
-    class Struct : Auto
+    public class Struct : Auto
     {
         private int weight { get; set; }
         private double addedPrice { get; set; }

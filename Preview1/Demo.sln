@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auto", "Auto\Auto.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exception", "Exception\Exception.csproj", "{871FF42A-E3D8-45E8-AA67-D65CB7B441E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "Interface\Interface.csproj", "{35C2054A-48AD-46EC-9107-936096D8DC7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collection", "Collection\Collection.csproj", "{336F2271-E37F-4E4F-B26C-0352390C71BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{871FF42A-E3D8-45E8-AA67-D65CB7B441E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{871FF42A-E3D8-45E8-AA67-D65CB7B441E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{871FF42A-E3D8-45E8-AA67-D65CB7B441E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35C2054A-48AD-46EC-9107-936096D8DC7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35C2054A-48AD-46EC-9107-936096D8DC7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35C2054A-48AD-46EC-9107-936096D8DC7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35C2054A-48AD-46EC-9107-936096D8DC7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{336F2271-E37F-4E4F-B26C-0352390C71BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{336F2271-E37F-4E4F-B26C-0352390C71BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{336F2271-E37F-4E4F-B26C-0352390C71BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{336F2271-E37F-4E4F-B26C-0352390C71BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Auto
 {
-    class Car : Auto
+    public class Car : Auto
     {
         private int numOfPassenger { get; set; }
         private double pricePerPass { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Auto
 {
-    class Auto
+    public class Auto
     {
         public int id { get; set; }
         public double basePrice { get; set; }

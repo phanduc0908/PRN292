@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Demo
 {
-    class Employee
+    public class Employee:IComparable
     {
-        int id { get; set; }
-        string name { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
 
         public Employee(int id, string name)
         {
@@ -28,6 +24,13 @@ namespace Demo
         public virtual void ShowInfo()
         {
             Console.WriteLine("ID:" + id + "- Name:" + name);
+        }
+
+        public int CompareTo(object obj)
+        {
+            Employee e = (Employee)obj;
+            // return e.id - this.id;
+            return e.name.CompareTo(this.name);
         }
     }
     class Fulltime : Employee
