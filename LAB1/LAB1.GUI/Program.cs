@@ -11,7 +11,7 @@ namespace LAB1.GUI
     {
         public static void LengthChangeHandle( int newLength)
         {
-            Console.WriteLine("Length of collection changed to " + newLength.ToString());
+            Console.WriteLine("Length of collection changed to: " + newLength.ToString());
         }
         static void Main(string[] args)
         {

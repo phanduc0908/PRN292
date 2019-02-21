@@ -184,11 +184,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FU Learnning\\SP 2019\\PRN 292\\LAB1\\LAB1.CORE\\LAB1.CORE.csproj",
+      "projectUniqueName": "D:\\Github\\PRN292\\LAB1\\LAB1.CORE\\LAB1.CORE.csproj",
       "projectName": "LAB1.CORE",
-      "projectPath": "D:\\FU Learnning\\SP 2019\\PRN 292\\LAB1\\LAB1.CORE\\LAB1.CORE.csproj",
+      "projectPath": "D:\\Github\\PRN292\\LAB1\\LAB1.CORE\\LAB1.CORE.csproj",
       "packagesPath": "C:\\Users\\Phan Van Duc\\.nuget\\packages\\",
-      "outputPath": "D:\\FU Learnning\\SP 2019\\PRN 292\\LAB1\\LAB1.CORE\\obj\\",
+      "outputPath": "D:\\Github\\PRN292\\LAB1\\LAB1.CORE\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
