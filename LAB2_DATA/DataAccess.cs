@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace LAB2_DATA
@@ -7,8 +8,8 @@ namespace LAB2_DATA
     {
         static public SqlConnection GetConnection()
         {
-            string ConnectionString = @"server=localhost;database=Northwind;user=sa;password=123456";
-            return new SqlConnection(ConnectionString);
+            string connectionString = ConfigurationManager.ConnectionStrings["NorthwndCStr"].ToString();
+            return new SqlConnection(connectionString);
         }
 
         static public DataTable GetDataBySql(string sql)

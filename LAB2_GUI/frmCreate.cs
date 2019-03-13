@@ -21,13 +21,29 @@ namespace LAB2_GUI
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string productName = txtProName.Text.Trim();
-            double price = Convert.ToDouble(txtPrice.Text.Trim());
+            string strPrice = txtPrice.Text.Trim();
+            
             int catID = Convert.ToInt32(ccbCat.SelectedValue);
             int supID = Convert.ToInt32(ccbSup.SelectedValue);
             bool discontinued = Convert.ToBoolean(cbDis.Checked);
+            if (strPrice == "")
+            {
+                MessageBox.Show("Price can not be null ");
+            }
+            else
+            {
+                if (productName == "")
+                {
+                    MessageBox.Show("Product name can not be null ");
+                }
+                else
+                {
+                    double price = Convert.ToDouble(txtPrice.Text.Trim());
+                    int result = ServiceProduct.CreateProduct(productName, catID, supID, price, discontinued);
+                    MessageBox.Show("Row effect(s): " + result.ToString());
+                }
+            }
 
-            int result = ServiceProduct.CreateProduct(productName, catID, supID, price, discontinued);
-            MessageBox.Show("Row effect(s): " + result.ToString());
         }
 
         private void frmCreate_Load(object sender, EventArgs e)

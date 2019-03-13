@@ -1,12 +1,6 @@
 ﻿using LAB2_DATA;
 using LAB2_SERVICE;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace LAB2_GUI
@@ -37,7 +31,7 @@ namespace LAB2_GUI
             dgv.Columns.Remove(dgv.Columns["editcol"]);
             dgv.Columns.Remove(dgv.Columns["delcol"]);
         }
-        void GetDataForDataGridView()
+        void GetDataProductForDataGridView()
         {
             if (dgv.Columns["editcol"] != null)
             {
@@ -46,16 +40,16 @@ namespace LAB2_GUI
 
             dgv.DataSource = ServiceProduct.GetAllProducts();
             GennerateButton();
-            btnAddPro.Enabled = true;
-            llbPro.Enabled = false;
+            btnAddPro.Visible = true;
 
+            llbPro.Enabled = false;
             llbSup.Enabled = true;
             llbOrd.Enabled = true;
             llbCat.Enabled = true;
         }
         void frmEdit_Closed(object sender, EventArgs e)
         {
-            GetDataForDataGridView();
+            GetDataProductForDataGridView();
         }
 
         private void Home_Load(object sender, EventArgs e)
@@ -63,7 +57,7 @@ namespace LAB2_GUI
             dgv.DataSource = ServiceCategory.GetCategories();
 
             llbCat.Enabled = false;
-            btnAddPro.Enabled = false;
+            btnAddPro.Visible = false;
         }
 
         private void llbSup_Click(object sender, EventArgs e)
@@ -74,9 +68,8 @@ namespace LAB2_GUI
             }
 
             dgv.DataSource = ServiceSupplier.GetSuppliers();
-            btnAddPro.Enabled = false;
+            btnAddPro.Visible = false;
             llbSup.Enabled = false;
-
             llbPro.Enabled = true;
             llbOrd.Enabled = true;
             llbCat.Enabled = true;
@@ -84,7 +77,7 @@ namespace LAB2_GUI
 
         private void llbPro_Click(object sender, EventArgs e)
         {
-            GetDataForDataGridView();
+            GetDataProductForDataGridView();
         }
 
         private void llbOrd_Click(object sender, EventArgs e)
@@ -93,11 +86,9 @@ namespace LAB2_GUI
             {
                 RemoveCol();
             }
-
             dgv.DataSource = ServiceOrder.GetAllOrders();
-            btnAddPro.Enabled = false;
+            btnAddPro.Visible = false;
             llbOrd.Enabled = false;
-
             llbPro.Enabled = true;
             llbSup.Enabled = true;
             llbCat.Enabled = true;
@@ -109,11 +100,9 @@ namespace LAB2_GUI
             {
                 RemoveCol();
             }
-
             dgv.DataSource = ServiceCategory.GetCategories();
-            btnAddPro.Enabled = false;
+            btnAddPro.Visible = false;
             llbCat.Enabled = false;
-
             llbPro.Enabled = true;
             llbOrd.Enabled = true;
             llbSup.Enabled = true;
@@ -129,7 +118,7 @@ namespace LAB2_GUI
                 {
                     int count = DataProduct.DeleteProduct(productID);
                     MessageBox.Show(count.ToString() + " products were deleted.");
-                    GetDataForDataGridView();
+                    GetDataProductForDataGridView();
                 }
             }
             if (dgv.Columns[e.ColumnIndex].Name == "editcol")
