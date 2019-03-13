@@ -84,6 +84,7 @@
             // 
             // ccbCat
             // 
+            this.ccbCat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ccbCat.FormattingEnabled = true;
             this.ccbCat.Location = new System.Drawing.Point(125, 175);
             this.ccbCat.Name = "ccbCat";
@@ -101,6 +102,7 @@
             // 
             // ccbSup
             // 
+            this.ccbSup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ccbSup.FormattingEnabled = true;
             this.ccbSup.Location = new System.Drawing.Point(125, 107);
             this.ccbSup.Name = "ccbSup";

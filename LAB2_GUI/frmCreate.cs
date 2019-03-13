@@ -20,28 +20,35 @@ namespace LAB2_GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            bool isValid = true;
+            string message = "";
+            double price = 0;
             string productName = txtProName.Text.Trim();
-            string strPrice = txtPrice.Text.Trim();
-            
+            if (productName == "")
+            {
+                isValid = false;
+                message = "Product name is required";
+            }
+            try
+            {
+                price = Convert.ToDouble(txtPrice.Text.Trim());
+            }
+            catch
+            {
+                isValid = false;
+                message = "Price is not correct";
+            }
             int catID = Convert.ToInt32(ccbCat.SelectedValue);
             int supID = Convert.ToInt32(ccbSup.SelectedValue);
             bool discontinued = Convert.ToBoolean(cbDis.Checked);
-            if (strPrice == "")
+            if (isValid)
             {
-                MessageBox.Show("Price can not be null ");
+                int result = ServiceProduct.CreateProduct(productName, catID, supID, price, discontinued);
+                MessageBox.Show("Row effect(s): " + result.ToString());
             }
             else
             {
-                if (productName == "")
-                {
-                    MessageBox.Show("Product name can not be null ");
-                }
-                else
-                {
-                    double price = Convert.ToDouble(txtPrice.Text.Trim());
-                    int result = ServiceProduct.CreateProduct(productName, catID, supID, price, discontinued);
-                    MessageBox.Show("Row effect(s): " + result.ToString());
-                }
+                MessageBox.Show(message);
             }
 
         }
